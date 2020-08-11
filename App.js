@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import GameEngine from 'react-native-game-engine';
+import { View } from 'react-native';
 
 import styles from './styles';
 
@@ -12,17 +13,8 @@ import spawnFruit from './src/Fruit/spawn_fruit';
 
 export default function App() {
   return (
-    <GameEngine
-        style={styles.container}
-        systems={moveSnake, spawnFruit}
-        entities={{
-            Snake: {position: [0, 0], renderer: <Snake />},
-            Fruit: {position: [200, 200], renderer: <Fruit />},
-        }}>
-        
-      <StatusBar hidden={true} />
-      </GameEngine>
-
+    <View style={styles.container}>
+    </View>
   );
 }
 
