@@ -1,3 +1,3 @@
-export const spawnFruit = (entities) => {
+export default spawnFruit = (entities) => {
     return entities
 };

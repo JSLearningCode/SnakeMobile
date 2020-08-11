@@ -1,3 +1,3 @@
-    export const moveSnake = (entities) => {
+export default moveSnake = (entities) => {
         return entities 
     };

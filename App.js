@@ -14,6 +14,10 @@ import spawnFruit from './src/Fruit/spawn_fruit';
 export default function App() {
   return (
     <View style={styles.container}>
+      <GameEngine
+        style={styles.container}
+        >
+      </GameEngine>
     </View>
   );
 }
