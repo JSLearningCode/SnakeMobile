@@ -7,14 +7,13 @@ import styles from './styles';
 
 import Snake from './src/Snake';
 import Fruit from './src/Fruit';
-import moveSnake from './src/Snake/move_snake';
-import spawnFruit from './src/Fruit/spawn_fruit';
-
+import GameLoop from './src/GameLoop';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <GameEngine
+        systems={{GameLoop}}
         style={styles.container}
         >
       </GameEngine>
