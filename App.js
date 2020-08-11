@@ -1,21 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import GameEngine from 'react-native-game-engine';
+
+import styles from './styles';
+
+import Snake from './src/Snake';
+import Fruit from './src/Fruit';
+import moveSnake from './src/Snake/move_snake';
+import spawnFruit from './src/Fruit/spawn_fruit';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <GameEngine
+        style={styles.container}
+        systems={moveSnake, spawnFruit}
+        entities={{
+            Snake: {position: [0, 0], renderer: <Snake />},
+            Fruit: {position: [200, 200], renderer: <Fruit />},
+        }}>
+        
+      <StatusBar hidden={true} />
+      </GameEngine>
+
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
