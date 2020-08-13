@@ -14,6 +14,9 @@ export default function App() {
     <View style={styles.container}>
       <GameEngine
         systems={{GameLoop}}
+        entities={{
+            Snake: { renderer: <Snake />},
+        }}
         style={styles.container}
         >
       </GameEngine>
