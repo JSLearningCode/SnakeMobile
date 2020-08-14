@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useState} from 'react';
 import { GameEngine, GameLoop } from 'react-native-game-engine';
 import { View } from 'react-native';
 
@@ -16,12 +16,11 @@ export default function App() {
         systems={[UpdateLoop]}
         entities={
             {
-                SnakeHead: {position: [100, 100], renderer: <SnakeHead/>}
+                SnakeHead: {position: [100, 100], velocity: [1,0], renderer: <SnakeHead/>}
             }
         }>
       </GameEngine>
     </View>
   );
 }
-
 
