@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const GameLoop = (entities, {touches, dispatch, events}) => {
-    console.log('tic');
+const GameLoop = (entities, {touches}) => {
     return entities;
-}
+};
 
+export { GameLoop };

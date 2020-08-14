@@ -1,24 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import GameEngine from 'react-native-game-engine';
+import { GameEngine } from 'react-native-game-engine';
 import { View } from 'react-native';
 
 import styles from './styles';
 
-import Snake from './src/Snake';
+import { SnakeHead } from './src/SnakeHead';
 import Fruit from './src/Fruit';
-import GameLoop from './src/GameLoop';
+import { GameLoop } from './src/GameLoop';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <GameEngine
-        systems={{GameLoop}}
-        entities={{
-            Snake: { renderer: <Snake />},
-        }}
-        style={styles.container}
-        >
+        systems={[GameLoop]}
+        entities={
+            {
+                SnakeHead: {renderer: <SnakeHead/>}
+            }
+        }>
       </GameEngine>
     </View>
   );

@@ -4,9 +4,11 @@ import { View } from 'react-native';
 import styles from './styles';
 
 
-export default function Snake() {
+const SnakeHead = () => {
     return (
         <View style={styles.container}>
         </View>
     );
 };
+
+export { SnakeHead };
