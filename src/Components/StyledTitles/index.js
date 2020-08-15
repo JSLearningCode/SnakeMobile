@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import StateMachine from '../../StateMachine';
 
 import styles from './styles';
 

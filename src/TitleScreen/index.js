@@ -11,7 +11,7 @@ export default function TitleScreen(props) {
         <View style={styles.container}>
             <Text style={styles.title}>RETRO SNAKE</Text>
             <View style={styles.options}>
-                <StyledTitles text='START' action='game' stateFunction={setState} />
+                <StyledTitles text='START' action='play' stateFunction={setState} />
                 <StyledTitles text='SCORE' action='score' stateFunction={setState} />
             </View>
         </View>
