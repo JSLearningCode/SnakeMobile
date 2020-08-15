@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View } from 'react-native';
 import { PanGestureHandler } from 'react-native-gesture-handler';
+import Engine from '../Engine';
 
 import styles from './styles';
 
@@ -24,7 +25,9 @@ export default function Game() {
 
     return(
         <PanGestureHandler onGestureEvent={e => controls(e)}>
-            <View style={styles.game}><Text>{text}</Text></View>
+            <View style={styles.game}>
+                <Engine />
+            </View>
         </PanGestureHandler>
     )
 };
