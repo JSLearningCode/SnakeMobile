@@ -5,14 +5,15 @@ import Score from '../Score';
 import Game from '../Game';
 import Over from '../Over';
 
+import styles from './styles';
 
 export default function StateMachine(props) {
     let [state, setState] = useState(props.state);
 
     return(
-        <View>
+        <View style={styles.container}>
             {state == 'title' && 
-                <TitleScreen />
+                <TitleScreen stateFunction={setState} />
             }
 
             {state == 'score' &&
