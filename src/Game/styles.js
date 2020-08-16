@@ -6,6 +6,6 @@ export default StyleSheet.create({
     },
 
     game: {
-        fontSize: 42,
+        flex: 1,
     },
 });

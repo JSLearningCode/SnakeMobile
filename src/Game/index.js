@@ -27,6 +27,7 @@ export default function Game() {
         <PanGestureHandler onGestureEvent={e => controls(e)}>
             <View style={styles.game}>
                 <Engine />
+                <Text>Juca</Text>
             </View>
         </PanGestureHandler>
     )
