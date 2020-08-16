@@ -5,10 +5,13 @@ import styles from './styles';
 import Head from './Head';
 import Body from './Body';
 
-export default function Snake() {
+export default function Snake(props) {
+    let head_position = props.position;
+    let head_velocity = props.velocity;
+
     return(
         <View style={styles.container}>
-            <Head />
+            <Head position={head_position} velocity={head_velocity} />
             <Body />
         </View>
     );
