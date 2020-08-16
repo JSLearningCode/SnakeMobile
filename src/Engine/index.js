@@ -6,11 +6,13 @@ import styles from './styles';
 import Snake from '../Snake';
 
 export default function Engine() {
+
     return(
         <GameEngine
             style={styles.container}
+            systems={[GameLoop]}
             entities={{
-                snake: {position: [100, 100], velocity: [0, 1], renderer: <Snake />},
+                snake: {position: [0, 0], velocity: [0.1,0], renderer: <Snake />},
             }}>
         </GameEngine>
     );
