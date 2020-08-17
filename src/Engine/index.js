@@ -3,16 +3,17 @@ import { GameEngine } from 'react-native-game-engine';
 import GameLoop from './GameLoop';
 
 import styles from './styles';
-import Snake from '../Snake';
+import Head from '../Snake/Head';
 
-export default function Engine() {
+export default function Engine(props) {
 
     return(
         <GameEngine
+            ref={ref => {props.ref = ref; }}
             style={styles.container}
             systems={[GameLoop]}
             entities={{
-                snake: {position: [0, 0], velocity: [0.1,0], renderer: <Snake />},
+                head: {position: [100, 100], velocity: [1,0], renderer: <Head />},
             }}>
         </GameEngine>
     );

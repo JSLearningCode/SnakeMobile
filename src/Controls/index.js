@@ -1,6 +1,8 @@
-export default function Controls(event) {
+
+export default function Controls(event, engine) {
+    console.log(engine);
     if (event.nativeEvent.translationX > 50) {
-        console.log('right');
+        engine.dispatch({type: "right"});
     } else if (event.nativeEvent.translationX < -50) {
         console.log('left');
     }
