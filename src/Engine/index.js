@@ -4,7 +4,7 @@ import GameLoop from './GameLoop';
 
 import styles from './styles';
 import Head from '../Snake/Head';
-import { render } from 'react-dom';
+import Fruit from '../Fruit';
 
 export default class Engine extends React.Component {
     constructor(props) {
@@ -19,6 +19,7 @@ export default class Engine extends React.Component {
                 systems={[GameLoop]}
                 entities={{
                     head: {position: [100, 100], velocity: [1,0], renderer: <Head />},
+                    fruit: { position: [200, 200], renderer: <Fruit />},
                 }}>
             </GameEngine>
         );
