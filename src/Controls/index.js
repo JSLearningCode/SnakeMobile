@@ -1,15 +1,15 @@
 
 export default function Controls(event, engine) {
-    console.log(engine);
+    console.log(engine.engine.dispatch);
     if (event.nativeEvent.translationX > 50) {
-        engine.dispatch({type: "right"});
+        engine.engine.dispatch({type: "right"});
     } else if (event.nativeEvent.translationX < -50) {
-        console.log('left');
+        engine.engine.dispatch({type: "left"});
     }
 
     if (event.nativeEvent.translationY > 50) {
-        console.log('bottom');
+        engine.engine.dispatch({type: "down"});
     } else if (event.nativeEvent.translationY < -50) {
-        console.log('top');
+        engine.engine.dispatch({type: "up"});
     }
 }

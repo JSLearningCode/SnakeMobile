@@ -6,14 +6,20 @@ import Controls from '../Controls';
 
 import styles from './styles';
 
-export default function Game() {
-    let engine;
+export default class Game extends React.Component {
+    constructor(props) {
+        super(props);
+        this.engine = null;
+    } 
 
-    return(
-        <PanGestureHandler onGestureEvent={(e, engine) => Controls(e, engine)}>
-            <View style={styles.game}>
-                <Engine ref={engine}/>
-            </View>
-        </PanGestureHandler>
-    )
+    render() {
+        return(
+            <PanGestureHandler onGestureEvent={e => Controls(e, this.engine)}>
+                <View style={styles.game}>
+                    <Engine ref={ ref => {this.engine = ref;}}/>
+                </View>
+            </PanGestureHandler>
+        )
+    }
+    
 };
